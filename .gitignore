@@ -1,0 +1,5 @@
+venv/
+venv_old/
+Inputs/
+Outputs/
+Docker/
