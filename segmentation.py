@@ -635,7 +635,7 @@ def build_probe(pr, e_1, l, n, pixdims, theta):
     distances = []
     thetas = []
     for e_2 in l:
-        pt_1 = e_1.S()
+        pt_1 = e_1.get_midpoint()
         pt_2 = e_2.get_midpoint()
         distances.append(calc_euclidean_dist_3D(pt_1, pt_2))
         if len(pr.get_electrodes()) >= 2:
