@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/502998245.svg)](https://zenodo.org/doi/10.5281/zenodo.12741314)
+
 main.py ->   Run in a VENV (not container), Handles GUI, call docker and pipe everything through the Vol
 
 process_subjects.py -> Run in mne docker, process and register mri/ct
