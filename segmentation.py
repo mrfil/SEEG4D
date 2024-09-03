@@ -653,7 +653,7 @@ def build_probe(pr, e_1, l, n, pixdims, theta):
 
 def save_probes(fname, e, c, pixdims):
     list_of_probes = []
-    search_dist = 20
+    search_dist = 12
     theta = 20 # theta is in degrees
     print("Starting")
     while e:
@@ -793,7 +793,7 @@ def segment_electrodes(f, rep_file, probefile, probelocationsfile, segmentedfile
             print(f'Electrode count: {len(e)}')
             for elect in e:
                 # A cube representative has length 27
-                if elect.get_length() <= 64 and erosion_counter > 0:
+                if elect.get_length() <= 64 and erosion_counter >= 0:
                     replace_electrode(elect, rep, d)
                 else:
                     elect.erode(d, rep)

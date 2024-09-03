@@ -181,7 +181,20 @@ def generate_fbx(obj_directory, filtered_csv, out_name, mode):
     # call plotting function
     #plot_eeg(eeg_x, contact_eeg_data, contact_names, f'{out_name}.png')
     bpy.ops.wm.save_mainfile(filepath=f'{out_name}.blend')
-    # bpy.ops.export_scene.fbx(filepath=f"{out_name}.fbx")
+    bpy.ops.export_scene.fbx(filepath=f"{out_name}.fbx", check_existing=True, filter_glob='*.fbx', use_selection=False,
+                             use_visible=False, use_active_collection=False, global_scale=1.0,
+                             apply_unit_scale=True, apply_scale_options='FBX_SCALE_NONE', use_space_transform=True,
+                             bake_space_transform=False,
+                             object_types={'ARMATURE', 'CAMERA', 'EMPTY', 'LIGHT', 'MESH', 'OTHER'},
+                             use_mesh_modifiers=True, use_mesh_modifiers_render=True, mesh_smooth_type='OFF',
+                             colors_type='SRGB', prioritize_active_color=False, use_subsurf=False,
+                             use_mesh_edges=False, use_tspace=False, use_triangles=False, use_custom_props=False,
+                             add_leaf_bones=False, primary_bone_axis='Y', secondary_bone_axis='X',
+                             use_armature_deform_only=True, armature_nodetype='NULL', bake_anim=True,
+                             bake_anim_use_all_bones=False, bake_anim_use_nla_strips=False,
+                             bake_anim_use_all_actions=False, bake_anim_force_startend_keying=True, bake_anim_step=1.0,
+                             bake_anim_simplify_factor=1.0, path_mode='COPY', embed_textures=False, batch_mode='OFF',
+                             use_batch_own_dir=True, use_metadata=True, axis_forward='-Z', axis_up='Y')
 
 
 
