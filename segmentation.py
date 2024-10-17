@@ -653,7 +653,7 @@ def build_probe(pr, e_1, l, n, pixdims, theta):
 
 def save_probes(fname, e, c, pixdims):
     list_of_probes = []
-    search_dist = 12
+    search_dist = 15
     theta = 20 # theta is in degrees
     print("Starting")
     while e:
